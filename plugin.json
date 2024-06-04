@@ -1,21 +1,29 @@
 {
     "name": "TargobankFinancing",
-    "type": "payment",
+    "type": "plugin",
     "version": "1.0.0",
     "description": "Integrates Targobank financing options into your Plentymarkets store.",
     "license": "GPL-3.0-or-later",
     "authors": [
-        {
-            "name": "Osman Demirel",
-            "email": "osmandemirel135@hotmail.com"
-        }
+      {
+        "name": "Osman Demirel",
+        "email": "osmandemirel135@hotmail.com"
+      }
     ],
     "require": {
-        "php": ">=7.2"
+      "php": ">=7.2"
     },
     "autoload": {
-        "psr-4": {
-            "TargobankFinancing\\": "src/"
-        }
-    }
-}
+      "psr-4": {
+        "TargobankFinancing\\": "src/"
+      }
+    },
+    "routes": [
+      {
+        "route": "/targobank/show",
+        "method": "GET",
+        "action": "TargobankFinancing\\Controllers\\TargobankFinancingController@showForm"
+      }
+    ]
+  }
+  
