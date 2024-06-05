@@ -1,0 +1,14 @@
+{
+    "PaymentMethod": {
+        "paymentMethodName": "Example Payment",
+        "paymentMethodDescription": "Pay with the example payment method"
+    },
+    "assistant": {
+        "assistantTitle": "Example Payment Assistant",
+        "assistantShortDescription": "Configure the example payment method",
+        "storeName": "Store Name",
+        "shippingCountriesTitle": "Shipping Countries",
+        "shippingCountriesDescription": "Select the countries where this payment method is available",
+        "shippingCountries": "Shipping Countries"
+    }
+}

@@ -1,29 +1,16 @@
 {
-    "name": "TargobankFinancing",
-    "type": "plugin",
+    "name": "PaymentMethod",
     "version": "1.0.0",
-    "description": "Integrates Targobank financing options into your Plentymarkets store.",
-    "license": "GPL-3.0-or-later",
-    "authors": [
-      {
-        "name": "Osman Demirel",
-        "email": "osmandemirel135@hotmail.com"
-      }
-    ],
-    "require": {
-      "php": ">=7.2"
-    },
-    "autoload": {
-      "psr-4": {
-        "TargobankFinancing\\": "src/"
-      }
-    },
-    "routes": [
-      {
-        "route": "/targobank/show",
-        "method": "GET",
-        "action": "TargobankFinancing\\Controllers\\TargobankFinancingController@showForm"
-      }
+    "pluginKey": "PaymentMethod",
+    "namespace": "PaymentMethod",
+    "author": "Osman Demirel",
+    "shortDescription": "Example payment method plugin",
+    "description": "A simple payment method plugin for plentymarkets",
+    "requires": [],
+    "serviceProvider": "PaymentMethod\\Providers\\PaymentMethodServiceProvider",
+    "routeServiceProvider": "PaymentMethod\\Providers\\PaymentMethodRouteServiceProvider",
+    "runOnBuild": [
+      "PaymentMethod\\Migrations\\CreatePaymentMethod"
     ]
   }
   
